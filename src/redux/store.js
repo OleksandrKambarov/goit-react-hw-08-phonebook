@@ -12,7 +12,7 @@ import {
 import storage from 'redux-persist/lib/storage';
 // import { todosReducer } from './todos';
 import { authReducer } from './auth';
-import { modalReducer } from "./modalSlice";
+import { modalReducer } from './modalSlice';
 
 const middleware = [
   ...getDefaultMiddleware({
