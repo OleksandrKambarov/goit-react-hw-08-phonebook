@@ -3,7 +3,7 @@ import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react';
 export const phonebookApi = createApi({
   reducerPath: 'phonebookApi',
   baseQuery: fetchBaseQuery({
-    baseUrl: 'https://6469ef6903bb12ac2095d8a5.mockapi.io/api/v1/',
+    baseUrl: 'https://6469145903bb12ac2085aa5f.mockapi.io/api/v1/',
   }),
   tagTypes: ['Contact'],
   endpoints: builder => ({
@@ -23,7 +23,8 @@ export const phonebookApi = createApi({
         url: '/contacts',
         method: 'POST',
         body: {
-          name, number
+          name,
+          number,
         },
       }),
       invalidatesTags: ['Contact'],
