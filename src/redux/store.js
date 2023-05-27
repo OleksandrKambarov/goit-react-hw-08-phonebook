@@ -10,7 +10,7 @@ import {
   REGISTER,
 } from 'redux-persist';
 import storage from 'redux-persist/lib/storage';
-// import { todosReducer } from './todos';
+
 import { authReducer } from './auth';
 import { modalReducer } from './modalSlice';
 
@@ -32,7 +32,6 @@ export const store = configureStore({
   reducer: {
     auth: persistReducer(authPersistConfig, authReducer),
     modal: modalReducer,
-    // todos: todosReducer,
   },
   middleware,
   devTools: process.env.NODE_ENV === 'development',
