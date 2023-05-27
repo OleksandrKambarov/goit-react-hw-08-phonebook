@@ -63,23 +63,3 @@ export default function App() {
     </Container>
   );
 }
-
-// <Switch>
-//   <Suspense fallback={<p>Загружаем...</p>}>
-//     <PublicRoute exact path="/">
-//       <HomeView />
-//     </PublicRoute>
-//     <PublicRoute exact path="/register" restricted>
-//       <RegisterView />
-//     </PublicRoute>
-//     <PublicRoute exact path="/login" redirectTo="/todos" restricted>
-//       <LoginView />
-//     </PublicRoute>
-//     <PrivateRoute path="/todos" redirectTo="/login">
-//       <TodosView />
-//     </PrivateRoute>
-//     <PrivateRoute path="/upload" redirectTo="/login">
-//       <UploadView />
-//     </PrivateRoute>
-//   </Suspense>
-// </Switch>

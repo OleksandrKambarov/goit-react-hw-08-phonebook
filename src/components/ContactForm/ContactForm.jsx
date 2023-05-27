@@ -2,21 +2,13 @@ import { React, useState } from 'react';
 import { useDispatch } from 'react-redux';
 
 import { setStatusModal } from 'redux/modalSlice';
-// import {
-//   useCreateContactMutation,
-//   useFetchContactsQuery,
-// } from 'redux/phonebookSlice';
 
 import { Button, Form, Label } from './ContactForm.styled';
-// import Notiflix from 'notiflix';
-// import { Spinner } from 'components/Spinner/Spinner';
 
 const ContactForm = () => {
   const [name, setName] = useState('');
   const [number, setNumber] = useState('');
   const dispatch = useDispatch();
-  // const [createContact, { isLoading, error }] = useCreateContactMutation();
-  // const { data: contacts } = useFetchContactsQuery();
 
   const handleName = e => {
     setName(e.currentTarget.value);
@@ -27,23 +19,6 @@ const ContactForm = () => {
 
   const handleSubmit = e => {
     e.preventDefault();
-
-    // const isNameExists = contacts.some(
-    //   contact => contact.name?.toLowerCase() === name.toLowerCase()
-    // );
-
-    // if (isNameExists) {
-    //   Notiflix.Notify.warning(`${name} is already in contacts`);
-    //   return;
-    // }
-
-    // createContact({ name: name, number: number });
-    // if (error) {
-    //   Notiflix.Notify.failure(error.message);
-    //   return;
-    // }
-
-    // Notiflix.Notify.success(isLoading);
 
     setName('');
     setNumber('');
@@ -78,13 +53,7 @@ const ContactForm = () => {
           />
         </Label>
         <br />
-        <Button
-          type="submit"
-          // disabled={isLoading}
-        >
-          {/* {isLoading && <Spinner size={12} />} */}
-          Add Contact
-        </Button>
+        <Button type="submit">Add Contact</Button>
       </Form>
     </>
   );
