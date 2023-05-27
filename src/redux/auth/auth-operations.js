@@ -72,7 +72,7 @@ const fetchCurrentUser = createAsyncThunk(
     const persistedToken = state.auth.token;
 
     if (persistedToken === null) {
-      console.log('Токена нет, уходим из fetchCurrentUser');
+      console.log('Токена відсутній, виходим з fetchCurrentUser');
       return thunkAPI.rejectWithValue();
     }
 
@@ -83,7 +83,7 @@ const fetchCurrentUser = createAsyncThunk(
     } catch (error) {
       // TODO: Добавить обработку ошибки error.message
     }
-  },
+  }
 );
 
 const operations = {
