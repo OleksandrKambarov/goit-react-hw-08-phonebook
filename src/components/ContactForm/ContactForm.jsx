@@ -66,12 +66,7 @@ const ContactForm = () => {
           />
         </Label>
         <br />
-        <Button
-          type="submit"
-          // disabled={isLoading}
-        >
-          Add Contact
-        </Button>
+        <Button type="submit">Add Contact</Button>
       </Form>
     </>
   );
