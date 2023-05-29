@@ -18,24 +18,22 @@ const styles = {
     justifyContent: 'center',
     alignItems: 'center',
     textAlign: 'center',
-    border: 'solid', 
-    padding: 20, 
+    border: 'solid',
+    padding: 20,
     margin: 50,
-    backgroundColor: 'lightgrey'
+    backgroundColor: 'lightgrey',
   },
 };
 
 const HomeView = () => (
   <div style={styles.container}>
     <h1 style={styles.title}>
-      Place for Your advertisment :){' '}
+      Hello!!!
       <span role="img" aria-label="Hi">
-        💁‍♀️
+        💁
       </span>
     </h1>
-    <div style={styles.description} >
-      Welcome to our user-friendly app designed to simplify your life! With our intuitive interface and powerful features, you can effortlessly manage your tasks, stay organized, and boost your productivity. Say goodbye to chaos and hello to efficiency as you streamline your daily routine. Let our app be your trusted companion on your journey towards success. Get started today and experience the convenience and ease our app brings to your fingertips.
-    </div>
+    <div style={styles.description}>Welcome to comfortable program.</div>
   </div>
 );
 
