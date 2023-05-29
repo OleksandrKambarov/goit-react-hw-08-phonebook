@@ -30,7 +30,7 @@ const HomeView = () => (
     <h1 style={styles.title}>
       Hello!!!
       <span role="img" aria-label="Hi">
-        💁
+        :)
       </span>
     </h1>
     <div style={styles.description}>Welcome to comfortable program.</div>
