@@ -37,9 +37,9 @@ export default function RegisterView() {
   const handleSubmit = e => {
     e.preventDefault();
     dispatch(authOperations.register({ name, email, password }));
-    setName('');
-    setEmail('');
-    setPassword('');
+    // setName('');
+    // setEmail('');
+    // setPassword('');
   };
 
   return (
@@ -47,19 +47,40 @@ export default function RegisterView() {
       <h1>Sign-Up page</h1>
 
       <form onSubmit={handleSubmit} style={styles.form} autoComplete="off">
-        <label style={styles.label}>  
-          <TextField label="Name" variant="outlined" name="name" value={name} onChange={handleChange} />
+        <label style={styles.label}>
+          <TextField
+            label="Name"
+            variant="outlined"
+            name="name"
+            value={name}
+            onChange={handleChange}
+          />
         </label>
 
         <label style={styles.label}>
-          <TextField label="E-mail" variant="outlined" name="email" value={email} onChange={handleChange} />
+          <TextField
+            label="E-mail"
+            variant="outlined"
+            name="email"
+            value={email}
+            onChange={handleChange}
+          />
         </label>
 
         <label style={styles.label}>
-          <TextField type="password" label="Password" variant="outlined" name="password" value={password} onChange={handleChange} />
+          <TextField
+            type="password"
+            label="Password"
+            variant="outlined"
+            name="password"
+            value={password}
+            onChange={handleChange}
+          />
         </label>
 
-        <Button variant="contained" type="submit">Sign-up</Button>
+        <Button variant="contained" type="submit">
+          Sign-up
+        </Button>
       </form>
     </div>
   );
