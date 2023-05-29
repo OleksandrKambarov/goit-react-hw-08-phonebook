@@ -3,7 +3,7 @@ import { useDispatch } from 'react-redux';
 import { authOperations } from '../redux/auth';
 import Button from '@mui/material/Button';
 import TextField from '@mui/material/TextField';
-import Notiflix from 'notiflix';
+// import Notiflix from 'notiflix';
 
 const styles = {
   form: {
@@ -37,7 +37,7 @@ export default function LoginView() {
 
     dispatch(authOperations.logIn({ email, password }));
 
-    Notiflix.Notify.failure('Incorrectly entered data. Try again');
+    // Notiflix.Notify.failure('Incorrectly entered data. Try again');
   };
 
   return (
