@@ -17,9 +17,9 @@ const styles = {
 const HomeView = () => (
   <div style={styles.container}>
     <h1 style={styles.title}>
-      Place for Your advertisment ;){' '}
+      Hello!!!
       <span role="img" aria-label="Hi">
-        💁‍♀️
+        💁
       </span>
     </h1>
   </div>

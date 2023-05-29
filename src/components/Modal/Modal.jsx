@@ -28,7 +28,6 @@ const Modal = ({ children }) => {
     return () => {
       window.removeEventListener('keydown', handleKeyDown);
     };
-    // eslint-disable-next-line
   }, []);
 
   return createPortal(

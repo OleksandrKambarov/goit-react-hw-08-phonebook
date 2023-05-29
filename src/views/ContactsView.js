@@ -3,9 +3,6 @@ import React from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { setStatusModal } from 'redux/modalSlice';
 import { getModal } from 'redux/selectors';
-// import { useFetchContactsQuery } from 'redux/phonebookSlice';
-// import ContactList from 'components/ContactList';
-// import { Spinner } from 'components/Spinner/Spinner';
 
 import Modal from '../components/Modal';
 import ContactForm from '../components/ContactForm';
@@ -49,4 +46,5 @@ const ContactsView = () => {
     </>
   );
 };
+
 export default ContactsView;
