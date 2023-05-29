@@ -1,6 +1,8 @@
 import { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { authOperations } from '../redux/auth';
+import Button from '@mui/material/Button';
+import TextField from '@mui/material/TextField';
 
 const styles = {
   form: {
@@ -42,26 +44,14 @@ export default function LoginView() {
 
       <form onSubmit={handleSubmit} style={styles.form} autoComplete="off">
         <label style={styles.label}>
-          E-mail
-          <input
-            type="email"
-            name="email"
-            value={email}
-            onChange={handleChange}
-          />
+          <TextField label="E-mail" variant="outlined" name="email" value={email} onChange={handleChange} />
         </label>
 
         <label style={styles.label}>
-          Password
-          <input
-            type="password"
-            name="password"
-            value={password}
-            onChange={handleChange}
-          />
+          <TextField type="password" label="Password" variant="outlined" name="password" value={password} onChange={handleChange} />
         </label>
 
-        <button type="submit">Log-in</button>
+        <Button variant="contained" type="submit">Log-in</Button>
       </form>
     </div>
   );

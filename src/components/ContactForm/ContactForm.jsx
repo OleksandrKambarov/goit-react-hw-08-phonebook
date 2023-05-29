@@ -1,14 +1,18 @@
 import { React, useState } from 'react';
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 
+import { addContact } from 'redux/contacts/operations';
 import { setStatusModal } from 'redux/modalSlice';
+import { selectAllContacts } from 'redux/contacts/selectors';
 
 import { Button, Form, Label } from './ContactForm.styled';
+import Notiflix from 'notiflix';
 
 const ContactForm = () => {
   const [name, setName] = useState('');
   const [number, setNumber] = useState('');
   const dispatch = useDispatch();
+  const contacts = useSelector(selectAllContacts);
 
   const handleName = e => {
     setName(e.currentTarget.value);
@@ -20,6 +24,15 @@ const ContactForm = () => {
   const handleSubmit = e => {
     e.preventDefault();
 
+    const isNameExists = contacts.some(
+      contact => contact.name?.toLowerCase() === name.toLowerCase()
+    );
+    if (isNameExists) {
+      Notiflix.Notify.warning(`${name} is already in contacts`);
+      return;
+    }
+
+    dispatch(addContact({ name, number }));
     setName('');
     setNumber('');
     dispatch(setStatusModal(false));
@@ -53,7 +66,12 @@ const ContactForm = () => {
           />
         </Label>
         <br />
-        <Button type="submit">Add Contact</Button>
+        <Button
+          type="submit"
+          // disabled={isLoading}
+        >
+          Add Contact
+        </Button>
       </Form>
     </>
   );

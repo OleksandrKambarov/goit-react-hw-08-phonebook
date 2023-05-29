@@ -6,6 +6,25 @@ export const ModalItems = styled.div`
   flex-direction: column;
 `;
 
+export const Container = styled.div`
+  display: flex;
+  align-items: center;
+`;
+
+export const Avatar = styled.img`
+  margin-right: 4px;
+  margin-left: 4px;
+`;
+
+export const Name = styled.span`
+  font-weight: 700;
+  font-size: 14px;
+  margin-right: 12px;
+  @media (max-width: 767px) {
+    font-size: 12px;
+  }
+`;
+
 export const ContactsHead = styled.div`
   display: flex;
   gap: 15px;
@@ -39,6 +58,9 @@ export const Button = styled.button`
   &:hover {
     background-color: #000;
     color: #fff;
+  }
+  @media (max-width: 767px) {
+    padding: 5px 7px 5px 7px;
   }
 `;
 

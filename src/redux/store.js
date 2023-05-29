@@ -10,9 +10,10 @@ import {
   REGISTER,
 } from 'redux-persist';
 import storage from 'redux-persist/lib/storage';
-
+import { contactsReducer } from './contacts/slice';
+import { filtersReducer } from './filtersSlice';
 import { authReducer } from './auth';
-import { modalReducer } from './modalSlice';
+import { modalReducer } from "./modalSlice";
 
 const middleware = [
   ...getDefaultMiddleware({
@@ -32,6 +33,8 @@ export const store = configureStore({
   reducer: {
     auth: persistReducer(authPersistConfig, authReducer),
     modal: modalReducer,
+    contacts: contactsReducer,
+    filters: filtersReducer,
   },
   middleware,
   devTools: process.env.NODE_ENV === 'development',

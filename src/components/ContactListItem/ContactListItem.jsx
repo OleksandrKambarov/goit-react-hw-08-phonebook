@@ -1,18 +1,12 @@
-import { useDeleteContactMutation } from 'redux/phonebookSlice';
-import { Spinner } from 'components/Spinner/Spinner';
-import Notiflix from 'notiflix';
+import { useDispatch } from 'react-redux';
+import { deleteContact } from 'redux/contacts/operations';
+
 import { Li, P, Button } from './ContactListItem.styled';
 
-export const ContactListItem = ({ id, name, number }) => {
-  const [deleteContact, { isLoading: isDeleting }] = useDeleteContactMutation();
-  const handleDelete = async id => {
-    try {
-      await deleteContact(id);
-      Notiflix.Notify.success('Contact deleted!');
-    } catch (error) {
-      Notiflix.Notify.failure(error);
-    }
-  };
+const ContactListItem = ({ id, name, number }) => {
+  const dispatch = useDispatch();
+
+  const handleDelete = () => dispatch(deleteContact(id));
 
   return (
     <Li key={id}>
@@ -22,11 +16,10 @@ export const ContactListItem = ({ id, name, number }) => {
         onClick={() => {
           handleDelete(id);
         }}
-        disabled={isDeleting}
       >
-        {isDeleting && <Spinner size={12} />}
         Delete
       </Button>
     </Li>
   );
 };
+export default ContactListItem;

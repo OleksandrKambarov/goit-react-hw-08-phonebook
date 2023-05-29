@@ -25,7 +25,7 @@ export default function App() {
   return (
     <Container>
       {isFetchingCurrentUser ? (
-        <h1>Waiting for user...</h1>
+        <h2>Waiting for user...</h2>
       ) : (
         <Routes>
           <Route path="/" element={<AppBar />}>

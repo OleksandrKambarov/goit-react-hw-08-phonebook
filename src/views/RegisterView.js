@@ -1,6 +1,8 @@
 import { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { authOperations } from '../redux/auth';
+import Button from '@mui/material/Button';
+import TextField from '@mui/material/TextField';
 
 const styles = {
   form: {
@@ -45,32 +47,19 @@ export default function RegisterView() {
       <h1>Sign-Up page</h1>
 
       <form onSubmit={handleSubmit} style={styles.form} autoComplete="off">
-        <label style={styles.label}>
-          Name
-          <input type="text" name="name" value={name} onChange={handleChange} />
+        <label style={styles.label}>  
+          <TextField label="Name" variant="outlined" name="name" value={name} onChange={handleChange} />
         </label>
 
         <label style={styles.label}>
-          E-mail
-          <input
-            type="email"
-            name="email"
-            value={email}
-            onChange={handleChange}
-          />
+          <TextField label="E-mail" variant="outlined" name="email" value={email} onChange={handleChange} />
         </label>
 
         <label style={styles.label}>
-          Password
-          <input
-            type="password"
-            name="password"
-            value={password}
-            onChange={handleChange}
-          />
+          <TextField type="password" label="Password" variant="outlined" name="password" value={password} onChange={handleChange} />
         </label>
 
-        <button type="submit">Sign-up</button>
+        <Button variant="contained" type="submit">Sign-up</Button>
       </form>
     </div>
   );
