@@ -3,6 +3,7 @@ import { useDispatch } from 'react-redux';
 import { authOperations } from '../redux/auth';
 import Button from '@mui/material/Button';
 import TextField from '@mui/material/TextField';
+import Notiflix from 'notiflix';
 
 const styles = {
   form: {
@@ -37,6 +38,7 @@ export default function RegisterView() {
   const handleSubmit = e => {
     e.preventDefault();
     dispatch(authOperations.register({ name, email, password }));
+    Notiflix.Notify.failure('Try again');
   };
 
   return (
