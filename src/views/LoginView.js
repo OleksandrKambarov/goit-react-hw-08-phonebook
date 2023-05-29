@@ -37,7 +37,7 @@ export default function LoginView() {
 
     dispatch(authOperations.logIn({ email, password }));
 
-    Notiflix.Notify.failure('Try again');
+    Notiflix.Notify.failure('Incorrectly entered data. Try again');
   };
 
   return (

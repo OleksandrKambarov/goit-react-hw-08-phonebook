@@ -38,7 +38,7 @@ export default function RegisterView() {
   const handleSubmit = e => {
     e.preventDefault();
     dispatch(authOperations.register({ name, email, password }));
-    Notiflix.Notify.failure('Try again');
+    Notiflix.Notify.failure('Incorrectly entered data. Try again');
   };
 
   return (
