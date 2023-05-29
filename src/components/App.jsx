@@ -8,6 +8,7 @@ import Container from './Container';
 import { PrivateRoute } from './PrivateRoute';
 import { PublicRoute } from './PublicRoute';
 import { authOperations, authSelectors } from '../redux/auth';
+import { Navigate } from 'react-router-dom';
 
 const HomeView = lazy(() => import('../views/HomeView'));
 const RegisterView = lazy(() => import('../views/RegisterView'));
@@ -58,6 +59,7 @@ export default function App() {
               }
             />
           </Route>
+          <Route path="*" element={<Navigate to="/" replace />}></Route>
         </Routes>
       )}
     </Container>
