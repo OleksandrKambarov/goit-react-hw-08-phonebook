@@ -59,7 +59,7 @@ const ContactForm = () => {
             type="tel"
             id="number"
             name="number"
-            placeholder="   + XX (YYY) XXX XX XX"
+            placeholder="  + XX (YYY) XXX XX XX"
             pattern="\+?\d{1,4}?[-.\s]?\(?\d{1,3}?\)?[-.\s]?\d{1,4}[-.\s]?\d{1,4}[-.\s]?\d{1,9}"
             value={number}
             onChange={handleNumber}
