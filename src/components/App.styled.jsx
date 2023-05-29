@@ -13,11 +13,11 @@ export const Link = styled(NavLink)`
 
   &.active {
     color: white;
-    background-color: orangered;
+    background-color: blue;
   }
   &:hover {
     color: white;
-    background-color: #ff591d;
+    background-color: #62b5f5;
   }
   @media (max-width: 767px) {
     padding: 6px 8px;

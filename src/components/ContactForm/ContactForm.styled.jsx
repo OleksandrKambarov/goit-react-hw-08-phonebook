@@ -18,7 +18,7 @@ export const Label = styled.label`
 `;
 
 export const Button = styled.button`
-  background-color: #fff;
+  background-color: #2ae575;
   color: #000;
   padding: 2px 5px 2px 5px;
   height: 30px;
