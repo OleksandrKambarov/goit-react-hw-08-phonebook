@@ -3,6 +3,7 @@ import { useDispatch } from 'react-redux';
 import { authOperations } from '../redux/auth';
 import Button from '@mui/material/Button';
 import TextField from '@mui/material/TextField';
+// import { Navigate } from 'react-router-dom';
 
 const styles = {
   form: {
@@ -33,9 +34,10 @@ export default function LoginView() {
 
   const handleSubmit = e => {
     e.preventDefault();
+
     dispatch(authOperations.logIn({ email, password }));
-    setEmail('');
-    setPassword('');
+    // setEmail('');
+    // setPassword('');
   };
 
   return (
@@ -44,14 +46,29 @@ export default function LoginView() {
 
       <form onSubmit={handleSubmit} style={styles.form} autoComplete="off">
         <label style={styles.label}>
-          <TextField label="E-mail" variant="outlined" name="email" value={email} onChange={handleChange} />
+          <TextField
+            label="E-mail"
+            variant="outlined"
+            name="email"
+            value={email}
+            onChange={handleChange}
+          />
         </label>
 
         <label style={styles.label}>
-          <TextField type="password" label="Password" variant="outlined" name="password" value={password} onChange={handleChange} />
+          <TextField
+            type="password"
+            label="Password"
+            variant="outlined"
+            name="password"
+            value={password}
+            onChange={handleChange}
+          />
         </label>
 
-        <Button variant="contained" type="submit">Log-in</Button>
+        <Button variant="contained" type="submit">
+          Log-in
+        </Button>
       </form>
     </div>
   );
