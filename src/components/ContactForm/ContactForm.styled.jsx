@@ -13,6 +13,7 @@ export const Form = styled.form`
 
 export const Label = styled.label`
   display: flex;
+  width: 350px;
   gap: 5px;
   line-height: 0;
 `;
