@@ -11,7 +11,7 @@ export const P = styled.p`
 `;
 
 export const Button = styled.button`
-  background-color: #fff;
+  background-color: #f31515;
   color: #000;
   padding: 2px 5px 2px 5px;
   height: 25px;
